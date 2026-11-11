@@ -1,0 +1,26 @@
+# Implementation Tasks
+
+- [x] Task 1: Data Models & Serialization
+  - Update `DocumentRecord` and `Flashcard` to implement `java.io.Serializable`
+- [x] Task 2: Dark / Light Mode Infrastructure
+  - Create `ThemeHelper.java`
+  - Update `themes.xml` to `Theme.MaterialComponents.DayNight.NoActionBar`
+  - Create `app/src/main/res/values-night/colors.xml`
+- [x] Task 3: 5-Industry Diverse Sample Generator & Preview in `FileAndAiHelper`
+  - Implement 5 sample templates across IT, Medicine, Economics, Law, Environment
+  - Implement `createRandomSampleDocx(Context)`
+  - Implement immediate text preview extractor
+- [x] Task 4: Layouts for Multi-Screen Flow
+  - Redesign `activity_main.xml` (Top bar with Logo, Theme, "Đã Lưu", preview card)
+  - Create `activity_summary.xml` ("Tóm tắt ý chính", "Lưu", "Luyện tập Flashcard")
+  - Create `activity_flashcard.xml` (3D Flashcard viewer)
+  - Create `activity_saved.xml` and item layout for saved documents
+- [x] Task 5: Implement Activities & Register in Manifest
+  - Update `MainActivity.java`
+  - Create `SummaryActivity.java`
+  - Create `FlashcardActivity.java`
+  - Create `SavedActivity.java`
+  - Register new activities in `AndroidManifest.xml`
+- [x] Task 6: Unit Tests & Verification
+  - Add unit test for all 5 sample topics
+  - Execute `./gradlew testDebugUnitTest assembleDebug`
