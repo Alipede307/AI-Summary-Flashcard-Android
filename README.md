@@ -1,8 +1,5 @@
 # AISummaryFlashcard
 
-Đồ án giữa kỳ môn Phát triển Ứng dụng Di động.
-Sinh viên thực hiện: Phan Đình Phước (MSSV: 524H0025).
-
 Ứng dụng Android native (Java, Android SDK thuần) đọc tài liệu học tập, gọi Google Gemini REST API để tóm tắt ý chính, tạo bộ thẻ flashcard ôn tập và lưu trữ ngoại tuyến bằng SQLite.
 
 ## Tính năng chính
