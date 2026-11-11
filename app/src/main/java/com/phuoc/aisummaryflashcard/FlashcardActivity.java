@@ -9,6 +9,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.IntentCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
@@ -37,7 +38,7 @@ public class FlashcardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flashcard);
 
-        currentRecord = (DocumentRecord) getIntent().getSerializableExtra("document_record");
+        currentRecord = IntentCompat.getSerializableExtra(getIntent(), "document_record", DocumentRecord.class);
         if (currentRecord == null || currentRecord.getFlashcards() == null || currentRecord.getFlashcards().isEmpty()) {
             Toast.makeText(this, "Không tìm thấy bộ thẻ Flashcard.", Toast.LENGTH_SHORT).show();
             finish();

@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.IntentCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.phuoc.aisummaryflashcard.db.DatabaseHelper;
@@ -33,7 +34,7 @@ public class SummaryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_summary);
 
         dbHelper = new DatabaseHelper(this);
-        currentRecord = (DocumentRecord) getIntent().getSerializableExtra("document_record");
+        currentRecord = IntentCompat.getSerializableExtra(getIntent(), "document_record", DocumentRecord.class);
 
         if (currentRecord == null) {
             Toast.makeText(this, "Không tìm thấy dữ liệu tóm tắt.", Toast.LENGTH_SHORT).show();
